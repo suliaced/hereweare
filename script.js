@@ -8,8 +8,8 @@ const MESSAGES = [
 ];
 
 /* The disclaimer screen. */
-const DISCLAIMER = "Before you continue, understand that this may involve the giving of personal info on your end. Nothing serious though.";
-const DISCLAIMER_NOTE = "Each answer is read by an AI, which replies with one short sentence.";
+const DISCLAIMER = "before you continue, understand that this may involve the giving of personal info on your end";
+const DISCLAIMER_NOTE = "be truthful";
 
 /* Survey questions. All placeholders for now.
    type "text"    = open-ended answer
@@ -33,17 +33,17 @@ const QUESTIONS = [
    WORKER_URL  = your Cloudflare Worker address. Blank = placeholder compliments.
    SUBMIT_URL  = where finished surveys get sent. Blank = nothing is sent anywhere.
    ARCHIVE_URL = link to the archive, shown on the last screen. Blank = no link. */
-const WORKER_URL  = "";
-const SUBMIT_URL  = "";
-const ARCHIVE_URL = "";
+const WORKER_URL  = "square-rice-e3b0.cryogenix20.workers.dev";
+const SUBMIT_URL  = "square-rice-e3b0.cryogenix20.workers.dev/submit";
+const ARCHIVE_URL = "https://suliaced.github.io/archive";
 
 const MAX_CHARS = 400;
 const MSG_MS = 4200;           /* how long each opening message lasts, in milliseconds */
 const FALLBACK = "Thank you for sharing that.";
 const PLACEHOLDER_COMPLIMENTS = [
-  "Placeholder compliment: that was a thoughtful answer.",
-  "Placeholder compliment: that says a lot in a few words.",
-  "Placeholder compliment: that was honest and well put."
+  "Placeholder compliment: okay",
+  "Placeholder compliment: alright",
+  "Placeholder compliment: ye"
 ];
 
 /* =================================== */
