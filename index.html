@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="A short survey.">
+
+  <title>here we are</title>
+
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <noscript><p style="padding:26px">this page needs javascript.</p></noscript>
+
+  <!-- 1. intro messages (fade in, grow, fade out) -->
+  <section id="intro" class="screen on" aria-label="Introduction">
+    <div class="center">
+      <div id="msg" class="big" role="status" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- 2. disclaimer -->
+  <section id="disclaimer" class="screen" aria-label="Disclaimer">
+    <div class="wrap">
+      <p id="disclaimerText" class="disclaimer"></p>
+      <p id="disclaimerNote" class="dim"></p>
+      <p><button id="agree" type="button">Agree</button></p>
+    </div>
+  </section>
+
+  <!-- 3. survey -->
+  <section id="survey" class="screen" aria-label="Survey">
+    <div class="wrap">
+      <div id="progress" class="dim"></div>
+      <div id="qblock">
+        <h2 id="prompt"></h2>
+        <div id="answerArea"></div>
+        <div id="hint" class="dim" role="status" aria-live="polite"></div>
+        <div id="reply" class="reply" aria-live="polite" hidden></div>
+        <p class="actions">
+          <button id="go" type="button">Enter</button>
+          <button id="next" type="button" hidden>Continue</button>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. end -->
+  <section id="end" class="screen" aria-label="Finished">
+    <div class="center">
+      <div>
+        <div id="endText" class="big"></div>
+        <p id="endLink" class="dim" hidden><a id="archiveLink" href="#">[ open the archive ]</a></p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
