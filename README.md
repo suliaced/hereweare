@@ -1,2 +1,0 @@
-# hereweare
-heh imma genius
