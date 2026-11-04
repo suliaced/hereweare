@@ -33,9 +33,9 @@ const QUESTIONS = [
    WORKER_URL  = your Cloudflare Worker address. Blank = placeholder compliments.
    SUBMIT_URL  = where finished surveys get sent. Blank = nothing is sent anywhere.
    ARCHIVE_URL = link to the archive, shown on the last screen. Blank = no link. */
-const WORKER_URL  = "";
-const SUBMIT_URL  = "";
-const ARCHIVE_URL = "";
+const WORKER_URL  = "https://square-rice-e3b0.cryogenix20.workers.dev";
+const SUBMIT_URL  = "https://square-rice-e3b0.cryogenix20.workers.dev/submit";
+const ARCHIVE_URL = "https://suliaced.github.io/archive";
 
 const MAX_CHARS = 400;
 const MSG_MS = 4200;           /* how long each opening message lasts, in milliseconds */
