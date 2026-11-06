@@ -17,8 +17,8 @@ const CONNECT_MS = 5500;
    Put your gif in the repo next to index.html, then type its file name here, e.g. "bg.gif".
    Leave it blank for a plain black background.
    BACKGROUND_DIM darkens it so the text stays readable: 0 = not at all, 1 = fully black. */
-const BACKGROUND_GIF = "";
-const BACKGROUND_DIM = 0.6;
+const BACKGROUND_GIF = "bg/x";
+const BACKGROUND_DIM = 0.3;
 
 /* Song. It starts at the same moment the background gif begins to fade in.
    Put your audio file in the repo next to index.html, then type its file name here, e.g. "song.mp3".
