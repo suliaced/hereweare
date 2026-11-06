@@ -25,7 +25,7 @@ const BACKGROUND_DIM = 0.6;
    Leave it blank for no music.
    Note: browsers block sound until the visitor has clicked or pressed a key on the page.
    If that hasn't happened yet, the song starts on their first click (the Agree button) instead. */
-const SONG = "";
+const SONG = "audio/anotherme.wav";
 const SONG_VOLUME = 0.6;          /* 0 = silent, 1 = full volume */
 const SONG_FADE_MS = 3000;        /* how long the song takes to fade in */
 
