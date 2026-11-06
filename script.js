@@ -28,8 +28,8 @@ const BACKGROUND_DIM = 0.7;
    (SONG_FIRST alone plays once and stops; SONG_LOOP alone loops from the start).
    Note: browsers block sound until the visitor has clicked or pressed a key on the page.
    If that hasn't happened yet, the music starts on their first click (the Agree button) instead. */
-const SONG_FIRST = "anotherme.wav";
-const SONG_LOOP = "anothermeshort.wav";
+const SONG_FIRST = "audio/anotherme.wav";
+const SONG_LOOP = "audio/anothermeshort.wav";
 const SONG_VOLUME = 0.6;          /* 0 = silent, 1 = full volume */
 const SONG_FADE_MS = 3000;        /* how long the first track takes to fade in */
 const SONG_END_FADE_MS = 3000;    /* how long the music takes to fade out when the survey is over */
