@@ -5,7 +5,7 @@ const INTRO_LINES = {
   dots: ". . .",
   arrived: "You have arrived.",
   connecting: "Connecting. .",
-  connected: "Connected."
+  connected: "Perfect."
 };
 
 /* How long "Connecting. ." stays up, in milliseconds (4000 to 7000 feels right).
@@ -31,14 +31,14 @@ const BACKGROUND_DIM = 0.7;
 const SONG_FIRST = "audio/anotherme.wav";
 const SONG_LOOP = "audio/anothermeshort.wav";
 const SONG_VOLUME = 0.6;          /* 0 = silent, 1 = full volume */
-const SONG_FADE_MS = 1000;        /* how long the first track takes to fade in */
+const SONG_FADE_MS = 500;         /* how long the first track takes to fade in */
 const SONG_END_FADE_MS = 1000;    /* how long the music takes to fade out when the survey is over */
 
 /* The change after "Connected.", in milliseconds:
    the intro text and eye fade out while the background and song fade in,
    then the disclaimer (and after it, the survey) fades in. */
 const INTRO_FADE_MS = 2400;       /* intro text and eye fading out */
-const BACKGROUND_FADE_MS = 10000;  /* background gif fading in */
+const BACKGROUND_FADE_MS = 5000;  /* background gif fading in */
 const SURVEY_FADE_MS = 3600;      /* disclaimer screen fading in */
 
 /* Survey timing, in milliseconds.
@@ -259,11 +259,14 @@ async function playIntro(){
     await typeLine(INTRO_LINES.connecting, 85);
     await pause(Math.max(0, connectMs - (performance.now() - t0)));
 
-    /* The eye opens on the same second "Connected." appears. */
-    eye.classList.add("open");
+    /* Clear the intro line, then let only the background and music fade in. */
     clearLine();
+    startBackground();
+    startSong();
+    await pause(BACKGROUND_FADE_MS);
+
     await typeLine(INTRO_LINES.connected, 70);
-    await pause(2200);
+    await pause(1200);
   } catch (e) {
     if (e !== SKIP) throw e;
   }
@@ -275,15 +278,13 @@ async function endIntro(){
   const wasSkipped = introSkipped;
   introDone = true;
 
-  /* 1. The background and the song begin fading in while the intro text and eye fade out. */
-  startBackground();
-  startSong();
+  /* The background and song have already faded in after the connecting sequence. */
   if (!wasSkipped && !reduced){
     await $("intro").animate([{opacity:1},{opacity:0}], {duration:INTRO_FADE_MS, easing:"ease", fill:"forwards"}).finished;
     await sleep(400);
   }
 
-  /* 2. Then the disclaimer (and after it, the survey) fades in over the background. */
+  /* Then the disclaimer (and after it, the survey) fades in over the background. */
   $("disclaimerText").textContent = DISCLAIMER;
   $("disclaimerNote").textContent = DISCLAIMER_NOTE;
   if (!reduced) $("disclaimer").style.animationDuration = SURVEY_FADE_MS + "ms";
