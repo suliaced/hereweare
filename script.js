@@ -17,8 +17,8 @@ const CONNECT_MS = 5500;
    Put your gif in the repo next to index.html, then type its file name here, e.g. "bg.gif".
    Leave it blank for a plain black background.
    BACKGROUND_DIM darkens it so the text stays readable: 0 = not at all, 1 = fully black. */
-const BACKGROUND_GIF = "";
-const BACKGROUND_DIM = 0.6;
+const BACKGROUND_GIF = "bg/stars";
+const BACKGROUND_DIM = 0.7;
 
 /* Music. Two tracks. It starts at the same moment the background gif begins to fade in.
    SONG_FIRST plays once, all the way through. The moment it ends, SONG_LOOP starts
@@ -28,8 +28,8 @@ const BACKGROUND_DIM = 0.6;
    (SONG_FIRST alone plays once and stops; SONG_LOOP alone loops from the start).
    Note: browsers block sound until the visitor has clicked or pressed a key on the page.
    If that hasn't happened yet, the music starts on their first click (the Agree button) instead. */
-const SONG_FIRST = "";
-const SONG_LOOP = "";
+const SONG_FIRST = "anotherme.wav";
+const SONG_LOOP = "anothermeshort.wav";
 const SONG_VOLUME = 0.6;          /* 0 = silent, 1 = full volume */
 const SONG_FADE_MS = 3000;        /* how long the first track takes to fade in */
 const SONG_END_FADE_MS = 3000;    /* how long the music takes to fade out when the survey is over */
@@ -52,8 +52,8 @@ const REPLY_HOLD_MS = 2600;       /* how long the finished reply stays on screen
 const NEXT_PAUSE_MS = 500;        /* break between the reply disappearing and the next question */
 
 /* The disclaimer screen. */
-const DISCLAIMER = "Before you continue, understand that this may involve the giving of personal info on your end. Nothing serious though.";
-const DISCLAIMER_NOTE = "Each answer is read by an AI, which replies with one short sentence.";
+const DISCLAIMER = "Before you continue, understand that this may involve the giving of personal info on your end.";
+const DISCLAIMER_NOTE = "Be truthful";
 
 /* Survey questions. All placeholders for now.
    type "text"    = open-ended answer
@@ -64,13 +64,15 @@ const PCOL = ["#ff5d5d","#ff9a3c","#ffd23f","#2ee6c5","#5aa9ff","#b57cff"];
 const MCOL = ["#a6ff3c","#ff4fd8","#4dffb0","#ff8f6b","#8f9bff","#e8e86a"];
 
 const QUESTIONS = [
-  { id:"q1", type:"text", prompt:"Placeholder question one. What should we call you?" },
-  { id:"physical", type:"ratings", prompt:"Rate your own physical abilities, from 1 to 10.",
+  { id:"q1", type:"text", prompt:"What should we call you?" },
+  { id:"physical", type:"ratings", prompt:"What is your physicality like?",
     items:["Speed","Strength","Durability","Height","Stamina","Precision"], colors:PCOL },
-  { id:"mental", type:"ratings", prompt:"Rate your own mental abilities, from 1 to 10.",
+  { id:"mental", type:"ratings", prompt:"What is your mind like?",
     items:["Cognition","Social","Adaptability","Creativity","Composure","Perception"], colors:MCOL },
-  { id:"q4", type:"text", prompt:"Placeholder question four. Describe yourself in a few words." },
-  { id:"q5", type:"text", prompt:"Placeholder question five. What is something you are proud of?" }
+  { id:"q4", type:"text", prompt:"Tell us something about yourself." },
+  { id:"q5", type:"text", prompt:"What is something you are proud of. .?" }
+  { id:"q6", type:"text", prompt:"What is one of your fears?" }
+  { id:"q7", type:"text", prompt:"Do you believe in free will?" }
 ];
 
 /* Wiring (leave blank until you have them):
