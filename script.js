@@ -38,7 +38,7 @@ const SONG_END_FADE_MS = 3000;    /* how long the music takes to fade out when t
    the intro text and eye fade out while the background and song fade in,
    then the disclaimer (and after it, the survey) fades in. */
 const INTRO_FADE_MS = 1400;       /* intro text and eye fading out */
-const BACKGROUND_FADE_MS = 3000;  /* background gif fading in */
+const BACKGROUND_FADE_MS = 5000;  /* background gif fading in */
 const SURVEY_FADE_MS = 1800;      /* disclaimer screen fading in */
 
 /* Survey timing, in milliseconds.
