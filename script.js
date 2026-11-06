@@ -70,7 +70,8 @@ const QUESTIONS = [
   { id:"mental", type:"ratings", prompt:"What is your mind like?",
     items:["Cognition","Social","Adaptability","Creativity","Composure","Perception"], colors:MCOL },
   { id:"q4", type:"text", prompt:"Tell us something about yourself." },
-  { id:"q5", type:"text", prompt:"What is something you are proud of. .?" }
+  { id:"q5", type:"text", prompt:"What is something you are proud of. .?" },
+  { id:"q6", type:"text", prompt:"Do you believe in free will, or is everything predetermined?" }
 ];
 
 /* Wiring (leave blank until you have them):
