@@ -11,7 +11,7 @@ const INTRO_LINES = {
 /* How long "Connecting. ." stays up, in milliseconds (4000 to 7000 feels right).
    The closed eye slowly fades in during this time, then opens when it ends,
    and "Connected." is typed at that same moment. */
-const CONNECT_MS = 5500;
+const CONNECT_MS = 1100;
 
 /* Background gif, shown behind the disclaimer and the survey.
    Put your gif in the repo next to index.html, then type its file name here, e.g. "bg.gif".
@@ -31,15 +31,15 @@ const BACKGROUND_DIM = 0.7;
 const SONG_FIRST = "audio/anotherme.wav";
 const SONG_LOOP = "audio/anothermeshort.wav";
 const SONG_VOLUME = 0.6;          /* 0 = silent, 1 = full volume */
-const SONG_FADE_MS = 3000;        /* how long the first track takes to fade in */
-const SONG_END_FADE_MS = 3000;    /* how long the music takes to fade out when the survey is over */
+const SONG_FADE_MS = 1000;        /* how long the first track takes to fade in */
+const SONG_END_FADE_MS = 1000;    /* how long the music takes to fade out when the survey is over */
 
 /* The change after "Connected.", in milliseconds:
    the intro text and eye fade out while the background and song fade in,
    then the disclaimer (and after it, the survey) fades in. */
-const INTRO_FADE_MS = 1400;       /* intro text and eye fading out */
-const BACKGROUND_FADE_MS = 5000;  /* background gif fading in */
-const SURVEY_FADE_MS = 1800;      /* disclaimer screen fading in */
+const INTRO_FADE_MS = 2400;       /* intro text and eye fading out */
+const BACKGROUND_FADE_MS = 10000;  /* background gif fading in */
+const SURVEY_FADE_MS = 3600;      /* disclaimer screen fading in */
 
 /* Survey timing, in milliseconds.
    Each question types itself in, then the answer box or sliders fade in below it.
